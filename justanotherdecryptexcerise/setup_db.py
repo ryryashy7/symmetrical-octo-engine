@@ -35,7 +35,7 @@ def main():
     conn = sqlite3.connect(DB_PATH)
     ensure_db(conn)
 
-    with open(CSV_PATH, newline="", encoding="utf-8") as f:
+    with open(CSV_PATH, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         count = 0
         for row in reader:
